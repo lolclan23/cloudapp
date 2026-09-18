@@ -8,13 +8,23 @@
 
 <style> body{
 font-family: Arial, sans-serif;
-
 background: linear-gradient(135deg, #1e3c72, #2a5298); text-align: center;
-padding-top: 60px; margin: 0;
+padding-top: 20px; margin: 0;
+}
+
+nav{
+background-color: white; padding: 15px;
+margin-bottom: 20px;
 }
 
 
-.contenedor{ background: white; width: 70%; margin: auto; padding: 40px;
+nav a{
+text-decoration: none; color: #1e3c72;
+font-weight: bold; margin: 15px;
+}
+
+
+.contenedor{ background: white; width: 75%; margin: auto; padding: 40px;
 border-radius: 20px;
 box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
 }
@@ -25,6 +35,12 @@ color: #1e3c72;
 }
 
 
+h2{
+color: #2a5298;
+
+}
+
+
 p{
 font-size: 18px; color: #333;
 }
@@ -32,16 +48,72 @@ font-size: 18px; color: #333;
 
 hr{
 width: 80%; margin: 20px auto;
-border: 1px solid #ddd;
-
 }
+
+
+img{
+border-radius: 10px; margin: 15px 0;
+}
+
+
+table{
+width: 100%;
+border-collapse: collapse; margin-top: 15px;
+}
+
+
+table, th, td{
+border: 1px solid #ccc;
+}
+
+
+th{
+
+background-color: #1e3c72; color: white;
+}
+
+
+th, td{
+padding: 10px;
+}
+
+
+form{
+margin-top: 20px;
+}
+
+
+input{
+padding: 10px; width: 250px;
+}
+
+
+button{
+padding: 10px 20px; background-color: #1e3c72; color: white;
+border: none; cursor: pointer;
+}
+
+
+button:hover{
+background-color: #2a5298;
+}
+
 </style>
 </head>
 <body>
 
 
+<nav>
+<a href="#">Inicio</a>
+<a href="#">Servicios</a>
+<a href="#">Contacto</a>
+</nav>
+
+
 <div class="contenedor">
-<h1>Proyecto Web en la Nube s.¸•˙7'</h1>
+
+
+<h1>Proyecto Web en la Nube '•˙¸.s7</h1>
 
 
 <hr>
@@ -56,7 +128,65 @@ border: 1px solid #ddd;
 <p>El proyecto demuestra el uso de servicios en la nube para alojar aplicaciones web.</p>
 
 
+<!-- Imagen -->
+<h2>Computación en la Nube</h2>
+
+
+<img	src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600"
+alt="Computación en la nube"
+
+width="400">
+
+
+<!-- Tabla -->
+<h2>Servicios Disponibles</h2>
+
+
+<table>
+<tr>
+<th>Servicio</th>
+<th>Estado</th>
+</tr>
+<tr>
+<td>GitHub</td>
+<td>Conectado</td>
+</tr>
+<tr>
+<td>Render</td>
+<td>Activo</td>
+</tr>
+<tr>
+<td>Sitio Web</td>
+<td>En línea</td>
+</tr>
+</table>
+
+
+<!-- Formulario -->
+<h2>Formulario de Contacto</h2>
+
+
+<form>
+
+<input type="text" placeholder="Nombre" required>
+<br><br>
+
+
+<input type="email" placeholder="Correo Electrónico" required>
+<br><br>
+
+
+<button type="submit">Enviar</button>
+</form>
+
+
+<!-- Información dinámica -->
+<h2 id="saludo"></h2>
+
+
 <p id="fecha"></p>
+
+
 </div>
 
 
@@ -65,9 +195,26 @@ const fecha = new Date();
 
 
 document.getElementById("fecha").innerHTML = "Fecha y hora actual: " + fecha.toLocaleString();
+
+const hora = new Date().getHours();
+
+
+let mensaje = "";
+
+
+if(hora < 12){
+mensaje = "Buenos días ";
+
+}else if(hora < 18){
+mensaje = "Buenas tardes ";
+}else{
+mensaje = "Buenas noches ";
+}
+
+
+document.getElementById("saludo").innerHTML = mensaje;
 </script>
 
 
 </body>
-
 </html>
