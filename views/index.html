@@ -1,48 +1,73 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CloudApp</title>
+<title>Proyecto Web en la Nube - Diego González</title>
+
 
 <style> body{
-font-family: Arial, sans-serif; background-color: #f4f6f9; text-align: center;
-padding-top: 60px;
+font-family: Arial, sans-serif;
+
+background: linear-gradient(135deg, #1e3c72, #2a5298); text-align: center;
+padding-top: 60px; margin: 0;
 }
 
-.contenedor{ background: white; width: 60%; margin: auto; padding: 30px;
-border-radius: 10px;
-box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+.contenedor{ background: white; width: 70%; margin: auto; padding: 40px;
+border-radius: 20px;
+box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
 }
+
 
 h1{
-color: #0077cc;
+color: #1e3c72;
 }
 
+
 p{
-font-size: 18px;
+font-size: 18px; color: #333;
+}
+
+
+hr{
+width: 80%; margin: 20px auto;
+border: 1px solid #ddd;
+
 }
 </style>
 </head>
 <body>
 
+
 <div class="contenedor">
-<h1>Aplicación en la Nube ☁️</h1>
-<p><strong>Estudiante:</strong> Juan Pérez</p>
+<h1>Proyecto Web en la Nube s.¸•˙7'</h1>
 
-<p>La aplicación está alojada en la nube correctamente.</p>
 
-<p>Servidor funcionando 24/7 desde internet.</p>
+<hr>
+
+
+<p><strong>Estudiante:</strong> Diego González</p>
+
+
+<p>Esta aplicación fue desplegada exitosamente utilizando GitHub y Render.</p>
+
+
+<p>El proyecto demuestra el uso de servicios en la nube para alojar aplicaciones web.</p>
+
 
 <p id="fecha"></p>
 </div>
 
+
 <script>
 const fecha = new Date();
 
-document.getElementById("fecha").innerHTML = "Fecha y hora: " + fecha;
+
+document.getElementById("fecha").innerHTML = "Fecha y hora actual: " + fecha.toLocaleString();
 </script>
 
+
 </body>
+
 </html>
